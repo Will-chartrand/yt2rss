@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<script>
+		function getRSS() {
+			const channelURL = document.getElementById("channelURL").value;
+			rssURL = "/getRSS?channelURL=" + channelURL;
+      window.open(rssURL, '_blank').focus();
+		}
+	</script>
+
+	<head>
+		<title>YT2RSS</title>
+		<link rel="stylesheet" href="./style.css"/>
+	</head>
+
+	<body>
+    <!-- Navbar -->
+    <div style="width: 100%">
+      <ul style="display: inline-flex">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/yt2rss">YT2RSS</a></li>
+      </ul>
+    </div>
+
+    <h1>
+      Youtube Channel URL to RSS feed URL Converter
+    </h1>
+
+    <p>
+      This website was designed to quickly and conveniently get the RSS feed urls for your favourite Youtube channels
+      without having to pay for some subscription. If you would like to see more features added just let me know (email willchartrand@gmail.com)!
+    </p>
+  
+		<label for="channelURL">Channel Page URL:</label><br>
+		<input type="text" id="channelURL" name="channelURL"><br>
+		<input type="submit" onclick="getRSS()" value="Submit">
+	</body>
+</html>
